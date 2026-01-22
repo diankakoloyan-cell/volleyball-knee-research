@@ -1,0 +1,418 @@
+> Di:
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Исследование - VolleyKnee Research</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">📊 Исследовательская часть</h1>
+                <p class="subtitle">Сравнительный анализ средств защиты коленного сустава</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Навигация -->
+    <nav class="main-nav">
+        <div class="container">
+            <a href="index.html" class="nav-item"><i class="fas fa-home"></i> Главная</a>
+            <a href="theory.html" class="nav-item"><i class="fas fa-book"></i> Теория</a>
+            <a href="research.html" class="nav-item active"><i class="fas fa-chart-bar"></i> Исследование</a>
+            <a href="recommendations.html" class="nav-item"><i class="fas fa-tips"></i> Рекомендации</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Методология -->
+        <section class="card">
+            <h2><i class="fas fa-flask"></i> Методология исследования</h2>
+            <div class="methodology">
+                <div class="method-step">
+                    <div class="step-number">1</div>
+                    <h3>Анализ рынка</h3>
+                    <p>Изучено 15 магазинов спортивных товаров и ортопедических салонов Москвы</p>
+                </div>
+                <div class="method-step">
+                    <div class="step-number">2</div>
+                    <h3>Опрос волейболистов</h3>
+                    <p>Анкетирование 30 волейболистов разных уровней подготовки</p>
+                </div>
+                <div class="method-step">
+                    <div class="step-number">3</div>
+                    <h3>Сравнение по критериям</h3>
+                    <p>7 ключевых параметров: цена, комфорт, фиксация, доступность и др.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Основная таблица -->
+        <section class="card">
+            <h2><i class="fas fa-table"></i> Сравнительная таблица средств защиты</h2>
+            
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Тип изделия</th>
+                        <th>Основное назначение</th>
+                        <th>Фиксация</th>
+                        <th>Комфорт</th>
+                        <th>Свобода движений</th>
+                        <th>Диапазон цены</th>
+                        <th>Доступность</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Мягкий бандаж</strong></td>
+                        <td>Профилактика, согревание, легкие ушибы</td>
+                        <td><span class="badge badge-medium">3/10</span></td>
+                        <td><span class="badge badge-high">9/10</span></td>
+                        <td><span class="badge badge-high">10/10</span></td>
+                        <td class="price">500-3 000 ₽</td>
+                        <td>Широкая</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Полужесткий ортез</strong></td>
+                        <td>Поддержка при нестабильности, после растяжений</td>
+                        <td><span class="badge badge-medium">6/10</span></td>
+                        <td><span class="badge badge-medium">5/10</span></td>
+                        <td><span class="badge badge-medium">7/10</span></td>
+                        <td class="price">2 000-8 000 ₽</td>
+                        <td>Средняя</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Жесткий ортез</strong></td>
+
+> Di:
+<td>Реабилитация после операций, серьезные травмы</td>
+                        <td><span class="badge badge-high">10/10</span></td>
+                        <td><span class="badge badge-low">2/10</span></td>
+                        <td><span class="badge badge-low">3/10</span></td>
+                        <td class="price">10 000-20 000 ₽</td>
+                        <td>Низкая</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Графики сравнения -->
+        <section class="card">
+            <h2><i class="fas fa-chart-line"></i> Графическое сравнение параметров</h2>
+            
+            <div class="chart-container">
+                <canvas id="comparisonChart"></canvas>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 30px;">
+                <div class="chart-mini">
+                    <canvas id="priceChart"></canvas>
+                    <h3>Сравнение цен</h3>
+                </div>
+                <div class="chart-mini">
+                    <canvas id="comfortChart"></canvas>
+                    <h3>Оценка комфорта</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Результаты опроса -->
+        <section class="card">
+            <h2><i class="fas fa-poll"></i> Результаты опроса волейболистов (n=30)</h2>
+            
+            <div class="survey-results">
+                <div class="survey-item">
+                    <h3>Использование защиты</h3>
+                    <div class="bar-chart">
+                        <div class="bar" style="width: 65%; background: #3498db;">
+                            <span>65% - используют</span>
+                        </div>
+                        <div class="bar" style="width: 35%; background: #e74c3c; margin-top: 10px;">
+                            <span>35% - не используют</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="survey-item">
+                    <h3>Удовлетворенность комфортом</h3>
+                    <div class="ratings">
+                        <div class="rating">
+                            <span>Мягкие бандажи</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                <span class="score">4.2/5</span>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <span>Полужесткие ортезы</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                                <span class="score">3.0/5</span>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <span>Жесткие ортезы</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                                <span class="score">1.5/5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Выводы -->
+        <section class="card conclusion">
+            <h2><i class="fas fa-lightbulb"></i> Выводы исследования</h2>
+            <div class="conclusion-content">
+                <div class="conclusion-card success">
+                    <h3><i class="fas fa-check-circle"></i> Гипотеза подтвердилась</h3>
+                    <p>Для большинства волейболистов-любителей мягкие бандажи оптимальны по критерию "комфорт-цена".</p>
+
+> Di:
+</div>
+                <div class="conclusion-card warning">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Проблема выявлена</h3>
+                    <p>Недостаток структурированной информации для осознанного выбора защиты колена.</p>
+                </div>
+                <div class="conclusion-card info">
+                    <h3><i class="fas fa-info-circle"></i> Рекомендация</h3>
+                    <p>Создать доступный гид по выбору защиты для волейболистов разных уровней.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🏐 VolleyKnee Research</h3>
+                    <p>Научный проект о защите коленных суставов волейболистов</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-school"></i> ГБОУ Школа №2101, Москва</p>
+                    <p><i class="fas fa-calendar"></i> 2024 год</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2024 Колоня Диана. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // График сравнения
+        const comparisonCtx = document.getElementById('comparisonChart').getContext('2d');
+        new Chart(comparisonCtx, {
+            type: 'radar',
+            data: {
+                labels: ['Фиксация', 'Комфорт', 'Свобода движений', 'Цена', 'Доступность'],
+                datasets: [
+                    {
+                        label: 'Мягкий бандаж',
+                        data: [3, 9, 10, 8, 10],
+                        borderColor: '#3498db',
+                        backgroundColor: 'rgba(52, 152, 219, 0.2)'
+                    },
+                    {
+                        label: 'Полужесткий ортез',
+                        data: [6, 5, 7, 5, 6],
+                        borderColor: '#2ecc71',
+                        backgroundColor: 'rgba(46, 204, 113, 0.2)'
+                    },
+                    {
+                        label: 'Жесткий ортез',
+                        data: [10, 2, 3, 2, 3],
+                        borderColor: '#e74c3c',
+                        backgroundColor: 'rgba(231, 76, 60, 0.2)'
+                    }
+                ]
+            },
+            options: {
+                scales: { r: { beginAtZero: true, max: 10 } },
+                responsive: true
+            }
+        });
+
+        // График цен
+        const priceCtx = document.getElementById('priceChart').getContext('2d');
+        new Chart(priceCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Мягкий', 'Полужесткий', 'Жесткий'],
+                datasets: [{
+                    label: 'Средняя цена (тыс. руб)',
+                    data: [1.75, 5, 15],
+                    backgroundColor: ['#3498db', '#2ecc71', '#e74c3c']
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: { y: { beginAtZero: true } }
+            }
+        });
+
+        // График комфорта
+        const comfortCtx = document.getElementById('comfortChart').getContext('2d');
+        new Chart(comfortCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Мягкий', 'Полужесткий', 'Жесткий'],
+                datasets: [{
+                    data: [4.2, 3.0, 1.5],
+                    backgroundColor: ['#3498db', '#2ecc71', '#e74c3c']
+                }]
+            },
+            options: { responsive: true }
+        });
+    </script>
+
+    <style>
+        /* Дополнительные стили для research.html */
+        .methodology {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .method-step {
+            background: #f8f9fa;
+            padding: 25px;
+
+> Di:
+border-radius: 12px;
+            position: relative;
+            border-left: 5px solid #3498db;
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            background: #3498db;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .badge-high { background: #d4edda; color: #155724; }
+        .badge-medium { background: #fff3cd; color: #856404; }
+        .badge-low { background: #f8d7da; color: #721c24; }
+        
+        .price {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .survey-results {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 25px;
+        }
+        
+        .survey-item {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+        }
+        
+        .bar-chart {
+            margin-top: 15px;
+        }
+        
+        .bar {
+            height: 35px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            color: white;
+            font-weight: 600;
+            transition: width 1s ease;
+        }
+        
+        .ratings {
+            margin-top: 20px;
+        }
+        
+        .rating {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .rating:last-child {
+            border-bottom: none;
+        }
+        
+        .stars {
+            color: #f39c12;
+        }
+        
+        .score {
+            margin-left: 10px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .conclusion-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        
+        .conclusion-card {
+            padding: 25px;
+            border-radius: 12px;
+            color: white;
+        }
+        
+        .success { background: linear-gradient(135deg, #2ecc71, #27ae60); }
+        .warning { background: linear-gradient(135deg, #f39c12, #e67e22); }
+        .info { background: linear-gradient(135deg, #3498db, #2980b9); }
+        
+        .chart-mini {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .chart-mini h3 {
+            margin-top: 15px;
+            color: #2c3e50;
+        }
+    </style>
+</body>
+</html>

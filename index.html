@@ -1,0 +1,163 @@
+> Di:
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Исследование: Волейбол и коленные суставы</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">🏐 VolleyKnee Research</h1>
+                <p class="subtitle">Научное исследование влияния волейбола на коленные суставы</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Навигация -->
+    <nav class="main-nav">
+        <div class="container">
+            <a href="index.html" class="nav-item active"><i class="fas fa-home"></i> Главная</a>
+            <a href="theory.html" class="nav-item"><i class="fas fa-book"></i> Теория</a>
+            <a href="research.html" class="nav-item"><i class="fas fa-chart-bar"></i> Исследование</a>
+            <a href="recommendations.html" class="nav-item"><i class="fas fa-tips"></i> Рекомендации</a>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="container">
+        <!-- О проекте -->
+        <section class="card">
+            <h2><i class="fas fa-user-graduate"></i> Об авторе</h2>
+            <div class="author-info">
+                <div class="author-card">
+                    <h3>Колоня Диана</h3>
+                    <p>Ученица 10 «Г» класса</p>
+                    <p>ГБОУ Школа №2101</p>
+                    <p class="email"><i class="fas fa-envelope"></i> diana@volleyknee.ru</p>
+                </div>
+                <div class="author-card">
+                    <h3>Научный руководитель</h3>
+                    <p>Пушков Георгий Эдуардович</p>
+                    <p>Преподаватель химии и биологии</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ключевые выводы -->
+        <section class="card">
+            <h2><i class="fas fa-star"></i> Ключевые выводы исследования</h2>
+            <div class="findings">
+                <div class="finding">
+                    <div class="finding-icon">📊</div>
+                    <h3>65% волейболистов</h3>
+                    <p>используют средства защиты колена</p>
+                </div>
+                <div class="finding">
+                    <div class="finding-icon">💰</div>
+                    <h3>Оптимальная цена</h3>
+                    <p>500-3000₽ для мягких бандажей</p>
+                </div>
+                <div class="finding">
+                    <div class="finding-icon">⭐</div>
+                    <h3>4.2/5 баллов</h3>
+                    <p>оценка комфорта мягких бандажей</p>
+                </div>
+                <div class="finding">
+                    <div class="finding-icon">🏥</div>
+                    <h3>3 типа защиты</h3>
+                    <p>для разных целей и травм</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Диаграмма использования -->
+        <section class="card">
+            <h2><i class="fas fa-chart-pie"></i> Статистика использования защиты</h2>
+            <div class="chart-container">
+                <canvas id="usageChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Быстрый навигатор -->
+        <section class="card">
+            <h2><i class="fas fa-compass"></i> Изучите исследование</h2>
+            <div class="quick-nav">
+                <a href="theory.html" class="quick-card">
+                    <div class="quick-icon"><i class="fas fa-bone"></i></div>
+                    <h3>Теория травм</h3>
+                    <p>Анатомия колена и механика травм в волейболе</p>
+                    <span class="arrow">→</span>
+                </a>
+                <a href="research.html" class="quick-card">
+                    <div class="quick-icon"><i class="fas fa-table"></i></div>
+
+> Di:
+<h3>Сравнительный анализ</h3>
+                    <p>Таблица сравнения 3 типов бандажей по 7 параметрам</p>
+                    <span class="arrow">→</span>
+                </a>
+                <a href="recommendations.html" class="quick-card">
+                    <div class="quick-icon"><i class="fas fa-hands-helping"></i></div>
+                    <h3>Выбор защиты</h3>
+                    <p>Как подобрать бандаж под ваш случай и бюджет</p>
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🏐 VolleyKnee Research</h3>
+                    <p>Научный проект о защите коленных суставов волейболистов</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-school"></i> ГБОУ Школа №2101, Москва</p>
+                    <p><i class="fas fa-calendar"></i> 2024 год</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2024 Колоня Диана. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script>
+        // График использования
+        const usageCtx = document.getElementById('usageChart').getContext('2d');
+        new Chart(usageCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Используют защиту', 'Не используют'],
+                datasets: [{
+                    data: [65, 35],
+                    backgroundColor: ['#3498db', '#e74c3c'],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'bottom' },
+                    title: {
+                        display: true,
+                        text: 'Использование бандажей среди 30 волейболистов'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
